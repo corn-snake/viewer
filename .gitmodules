@@ -1,0 +1,3 @@
+[submodule "2gltf2"]
+	path = lib/2gltf2
+	url = https://github.com/ux3d/2gltf2.git
