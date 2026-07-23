@@ -11,6 +11,7 @@ const r = new Router()
         if (r.url.lastIndexOf("/") + 1 === r.url.length) return small404();
         const last = r.url.substring(r.url.lastIndexOf("/") + 1);
         const stat = await to_gltf(last);
+        console.log(r.url)
         if (stat) return new Response(null, { status: 308, headers: { location: "/" + last.substring(0,last.lastIndexOf(".") + 1) + "glb" } })
         return small404();
     })/*
@@ -27,6 +28,7 @@ const r = new Router()
         const ct = contentType(extname(url.pathname)) ?? (url.pathname.endsWith(".blend") ? "application/x-blender" : "application/octet-stream"),
             cc = url.pathname.endsWith("mp4") || url.pathname.endsWith("blend") || url.pathname.endsWith("glb") ? "max-age=6400" : "no-cache";
         const f = Deno.readFile("./public" + url.pathname).then(t => new Response(t, {headers: {"Content-Type": ct, "CDN-Cache-Control": cc}})).catch(() => small404())
+        console.log(url.pathname)
         return await f;
     });
 

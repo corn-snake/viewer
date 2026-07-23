@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>3d browser render blender ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</title>
+    </head>
+    <body>
+        <header>W A O W<nav>
+            <button id="casa" onclick="housify()">CASA</button>
+            <button id="cuarto" onclick="roomify()">CUARTO</button><!--button id="rotate">GIRAR</button--></nav></header>
+        <main id="stage">
+            <video controls loop muted id="housey" onplay="play_handle()">
+                <source src="/house.mp4" id="houseysrc"/>
+                womp womp
+            </video>
+        </main>
+        <footer><span><small>somebody sedate me</small>2gltf2 under the Apache License v2, THREE.js under the MIT License. everything else i release into the public domain</span></footer>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                max-width: 100vw;
+                max-height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+            header, footer {
+                height: 10vh;
+                background-color: #222;
+                color: #ddd;
+                box-sizing: border-box;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+            }
+            footer small {
+                color: transparent;
+                opacity: 0%;
+            }
+            header {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                font-size: calc(10vh * .85 *.5);
+            }
+            nav {
+                margin-top: -4px;
+            }
+            nav :not(:last-child) {
+                margin-right: 2rem;
+            }
+            main {
+                height: 80vh;
+                display: flex;
+                justify-content: space-around;
+                max-width: 100vw;
+            }
+            video {
+                height: 80vh;
+                max-width: 100vw;
+            }
+            button {
+                font-size: calc(10vh * .85 *.4);
+            }
+            @media screen and (max-width: 500px) {
+                header {
+                    font-size: calc(10vh * .85 *.3);
+                }
+                button {
+                    font-size: calc(10vh * .85 *.2);
+                }
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="/old/functioning.js"></script>
+    </body>
+</html>

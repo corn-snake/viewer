@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="">
     <head>
-        <script type="module" src="/functioning.js"></script>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>3d browser render blender ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</title>
-        <script>
-            function housify(e){
-                console.log('house!');
-                document.getElementById('houseysrc').setAttribute('src', '/house.mp4');
-                document.getElementById('housey').load();
-            }
-            function roomify(e){
-                console.log('room!');
-                document.getElementById('houseysrc').setAttribute('src', '/room.mp4');
-                document.getElementById('housey').load();
-            }
-        </script>
     </head>
     <body>
         <header>W A O W<nav>
             <button id="casa" onclick="housify()">CASA</button>
             <button id="cuarto" onclick="roomify()">CUARTO</button><!--button id="rotate">GIRAR</button--></nav></header>
         <main id="stage">
-            <video autoplay controls loop muted id="housey">
+            <!--video autoplay controls loop muted id="housey">
                 <source src="/house.mp4" id="houseysrc"/>
                 womp womp
-            </video>
+            </video-->
         </main>
         <footer><span><small>somebody sedate me</small>2gltf2 under the Apache License v2, THREE.js under the MIT License. everything else i release into the public domain</span></footer>
         <style>
@@ -85,5 +72,9 @@
                 }
             }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="/functioning.js"></script>
     </body>
 </html>
